@@ -21,13 +21,6 @@ let interval2 = false
 
 bot.on("message", async message => {
 
-  setInterval(function() {
-    if(interval2 == true){
-      message.channel.send("Mohammed was a wife beater")
-    }
-  }, 1000)
-
-  if (message.author.bot) return;
 
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
@@ -52,13 +45,6 @@ bot.on("message", async message => {
         console.log("Skipped!")
       }
     })
-  } else
-  if (cmd === `passage`) {
-    if (interval2 == false) {
-      interval2 = true
-    } else {
-      interval2 = false
-    }
   }
 });
 
