@@ -11,5 +11,8 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "quran": "0.0.9"
+  },
+  "engines": {
+    "node": "^11.5.1"
   }
 }
