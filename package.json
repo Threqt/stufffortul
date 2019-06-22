@@ -10,8 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "quick.db": "^7.0.0-b22",
-    "quran": "0.0.9"
+    "quick.db": "^7.0.0-b22"
   },
   "engines": {
     "node": "10.13.0",
