@@ -25,7 +25,7 @@ bot.on("message", async message => {
     if(interval2 == true){
       message.channel.send("Mohammed was a wife beater")
     }
-  }, 10000)
+  }, 1000)
 
   if (message.author.bot) return;
 
