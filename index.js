@@ -29,7 +29,7 @@ bot.on("message", async message => {
     if(number1 == null){
       db.set(`number_${message.guild.id}`, 0)
     }
-    console.log(number1)
+    console.log(db.fetch(`number_${message.guild.id}`))
     console.log(message.content)
     if(message.content == number1 + 1){
       db.set(`number_${message.guild.id}`, number1 + 1)
