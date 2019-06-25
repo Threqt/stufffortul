@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({
   disableEverybody: true
 })
+const db = require('quick.db')
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
