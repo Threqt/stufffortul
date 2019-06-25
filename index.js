@@ -25,15 +25,15 @@ bot.on("message", async message => {
   let counting = message.guild.channels.find("name", "counting")
 
   if(message.channel.name === counting.name){
-    let number1 = db.fetch(`number`)
+    let number1 = db.fetch(`number_${message.guild.id}`)
     if(number1 == null){
       return db.set(`number`, 0)
     }
-    console.log(db.fetch(`number`))
+    console.log(db.fetch(`number_${message.guild.id}`))
     console.log(message.content)
     if(message.content == number1 + 1){
-      db.set(`number`, number1 + 1)
-      return message.channel.setTopic(`Next number is ${db.fetch(`number`) + 1}`)
+      db.set(`number_${message.guild.id}`, number1 + 1)
+      return message.channel.setTopic(`Next number is ${db.fetch(`number_${message.guild.id}`) + 1}`)
     } else {
       return message.delete()
     }
