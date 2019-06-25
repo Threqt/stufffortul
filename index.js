@@ -26,7 +26,7 @@ bot.on("message", async message => {
 
   if(message.channel.name === counting.name){
     let number1 = db.fetch(`number_${message.guild.id}`)
-    if(number1 = null){
+    if(number1 == null){
       db.set(`number_${message.guild.id}`, 0)
     }
     console.log(number1)
