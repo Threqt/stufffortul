@@ -30,7 +30,7 @@ bot.on("message", async message => {
     console.log(message.content)
     if(message.content == number1 + 1){
       db.set(`number_${message.guild.id}`, number1 + 1)
-      return message.channel.setTopic(`Next number is ${db.fetch(`number_${message.guild.id}`)}`)
+      return message.channel.setTopic(`Next number is ${db.fetch(`number_${message.guild.id}`) + 1}`)
     } else {
       return message.delete()
     }
